@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+<meta http-equiv="x-ua-compatible" content="ie=edge"> 
+
+<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+
+<link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+
+<link rel="manifest" href="img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<title>SentiMar
+</title> 
+<!-- MDB icon --> 
+
+<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon"> 
+<!-- Font Awesome --> 
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"> 
+<!-- Google Fonts Roboto --> 
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"> 
+<!-- Bootstrap core CSS --> 
+
+<link rel="stylesheet" href="css/bootstrap.min.css"> 
+<!-- Material Design Bootstrap --> 
+
+<link rel="stylesheet" href="css/mdb.min.css"> 
+<!-- Your custom styles (optional) --> 
+
+<link rel="stylesheet" href="css/style.css">
+<style class="cp-pen-styles">
+
+  
+  #learn-more {
+    fill-opacity: 0;
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 2;
+    border-radius: 5px;
+    stroke-linejoin: round;
+    -webkit-transition: all 250ms ease-in;
+    transition: all 250ms ease-in;
+    cursor: pointer;
+  }
+  #learn-more:hover {
+    fill-opacity: 1;
+  }
+  #learn-more:hover ~ .learn-more-text {
+    fill: #25d366;
+  }
+  
+  .learn-more-text {
+    font-family: 'Roboto';
+    fill: #fff;
+    pointer-events: none;
+    font-size: 14px;
+    -webkit-transition: all 250ms ease-in;
+    transition: all 250ms ease-in;
+  }
+  
+  .center {
+    fill: #25d366;
+  }
+  
+  .pointer {
+    fill: #fff;
+    stroke: #25d366;
+    stroke-width: 2;
+  }
+  
+  .nav-copy {
+    font-family: 'Roboto';
+    fill: #fff;
+    fill-opacity: 1;
+    -webkit-transition: all 250ms ease-in;
+    transition: all 250ms ease-in;
+  }
+  .nav-copy.changing {
+    fill-opacity: 0;
+  }
+  
+  .service {
+    cursor: pointer;
+  }
+  .service text {
+    font-size: 14px;
+    font-family: 'Roboto';
+    text-anchor: middle;
+  }
+  .service .icon-wrapper {
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  .service .icon-wrapper, .service .icon-wrapper > * {
+    -webkit-transition: all 250ms ease-in;
+    transition: all 250ms ease-in;
+  }
+  .service circle {
+    fill: #25d366;
+  }
+  .service circle.shadow {
+    fill-opacity: 0;
+    -webkit-filter: url(#service-shadow);
+            filter: url(#service-shadow);
+  }
+  .service use {
+    fill: #fff;
+  }
+  .service text {
+    fill: #4d4d4d;
+  }
+  .service.active .icon-wrapper, .service:hover .icon-wrapper {
+    -webkit-transform: scale(1.15) translateY(-5px);
+            transform: scale(1.15) translateY(-5px);
+  }
+  .service.active .icon-wrapper, .service.active .icon-wrapper > *, .service:hover .icon-wrapper, .service:hover .icon-wrapper > * {
+    -webkit-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+  }
+  .service.active .icon-wrapper circle.shadow, .service:hover .icon-wrapper circle.shadow {
+    fill-opacity: 0.4;
+  }
+  .service.active text, .service:hover text {
+    fill: #25d366;
+    font-weight: bold;
+  }
+  </style>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  
+  <!-- Global site tag (gtag.js) - Google Ads: 657625033 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-657625033"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-657625033'); </script>
+
+<!-- Facebook Pixel Code -->
+
+<script>
+
+
+  !function(f,b,e,v,n,t,s)
+  
+  
+  
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  
+  
+  
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  
+  
+  
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  
+  
+  
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  
+  
+  
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  
+  
+  
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  
+  
+  
+  'https://connect.facebook.net/en_US/fbevents.js');
+  
+  
+  
+  fbq('init', '611470326098269');
+  
+  
+  
+  fbq('track', 'PageView');
+  
+  
+  </script>
+  
+  <noscript>
+  
+  <img height="1" width="1"
+  
+  src="https://www.facebook.com/tr?id=611470326098269&ev=PageView
+  
+  &noscript=1"/>
+  
+  </noscript>
+  
+  <!-- End Facebook Pixel Code -->
+  
+
+
+</head>
+
+<body>
+<!--Navbar--><nav class="navbar navbar-expand-lg navbar-dark elegant-color fixed-top lighten-3 d-block" id="navbar"> 
+
+<div class="container"> 
+<!-- Collapsible content --> 
+
+<div class="collapse navbar-collapse mb-1" id="basicExampleNav"> 
+<ul class="navbar-nav ml-auto nav-flex-icons"> 
+<li class="nav-item"> <a class="nav-link" href="mailto:ventas@sentimar.com.mx?Subject=Me%20gustaría%20saber%20más%20de%20sus%20productos%20y%20servicios%20"style="font-size: 19px;">ventas@sentimar.com.mx </a> </li>
+<li class="nav-item" ><a class="nav-link" href="https://twitter.com/sentimarmexico" target="_blank"style="padding-left: 40px" > <i class="fab fa-twitter-square"></i></a> </li> 
+<li class="nav-item"><a class="nav-link" href="https://www.facebook.com/SentiMar-868702093464156/"target="_blank" > <i class="fab fa-facebook-square"></i></a> </li> 
+</ul> 
+</div> 
+<!-- Collapsible content --> 
+</div> 
+<hr class="w-10 mt-0"> 
+
+<div class="container pb-1"> <a class="navbar-brand" href="index" > <img src="img\PAG PRINCIPAL\sentimar.png" height="65" alt="mdb logo"> </a> 
+<!-- Collapse button --> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav1" aria-controls="basicExampleNav1" aria-expanded="false" aria-label="Toggle navigation"> 
+
+<span class="navbar-toggler-icon">
+</span> </button> 
+<!-- Collapsible content --> 
+
+<div class="collapse navbar-collapse  pt-4 " id="basicExampleNav1"> 
+<!-- Links --> 
+<ul class="navbar-nav  navbar-collapse text-uppercase font-weight-normal  " style="width: 450px; padding-top:10px ;"> <a> </a> 
+<li class="nav-item"> <a class="nav-link" href="index" style="padding-top: 0px; padding-left: 8px;">INICIO</a> </li> 
+<li class="nav-item"> <a class="nav-link" href="nuestro_trabajo_energia_solar"style="padding-top: 0px;  ">NUESTRO TRABAJO</a> </li> 
+<li class="nav-item"> <a class="nav-link " href="que_necesitas"style="padding-top: 0px;  ">¿Qué Necesitas?</a> </li>
+<li class="nav-item"> <a class="nav-link" href="como_funciona"style="padding-top: 0px; ">¿Cómo Funciona?</a> </li>  
+<li class="nav-item"> <a class="nav-link" href="productos_energia_solar" style="padding-top: 0px;">PRODUCTOS</a> </li> 
+<li class="nav-item"> <a class="nav-link" href="#contact"style="padding-top: 0px;">CONTACTO</a> </li> 
+
+</ul>
+</div>
+
+ 
+<ul class="navbar-nav  pt-4 mr-auto text-uppercase font-weight-normal item " > <a> </a> 
+  <div class="d-block  ">
+<li class="nav-item"><a href="tel:+525512902191" class="nav-link d-block  " style="padding-top: 0px;font-family:Arial Black, Gadget, sans-serif ;font-size: 15px; text-align: ;"> <strong >Llama y cotiza gratis</a>
+
+  <a href="tel:+525512902191" class="d-flex justify-content-center" style="color: aqua;font-family: Arial Black, Gadget, sans-serif ;  font-size: 22px; text-align: ;">
+    <img src="img/favicon/mexico (2).png" alt="bandera de mexico" class="d-block align-top"> (55) 1290 2191</strong> </a>  </li>
+  </div>
+   
+</ul> 
+
+
+<!-- Links --> 
+</div> 
+<!-- Collapsible content --> 
+</div></nav> 
+<!--/.Navbar--> <a href="https://wa.me/5215512902191?text=Me%20gustaría%20saber%20más%20de%20sus%20productos%20y%20servicios%20" class="whatsapp" target="_blank"> <i class="fab fa-whatsapp"></i></a> 
+<!-- Grid row -->
+
+
+
+
+     
+
+
+
+<div class="col-lg-12 col-md-12" style="background-color: black;position: relative;bottom: 10px;padding-top: 200px;" > 
+
+
+  <section id="quenecesitas"> 
+  <div class="text-center "> 
+  <!--Title--> <h1 class="white-text" style="position: relative;bottom: 50px;font-family: 'PT Sans Bold', 'PT Sans', sans-serif"><strong>¿Qué Necesitas?</strong></h1> 
+  <!--Text-->
+  </div>
+
+  <div id="quenecesitas"  style="padding-top: 20px;" >
+    <div class="row">
+    <div class="col-lg-6 col-md-6 mb-2 ">
+       
+      <div class="row">         
+
+        <div class="col-lg-2 col-md-2 mb-2 ">
+          <div class="energia_number">1</div>
+        </div>
+        <div class="col-lg-6 col-md-6 mb-2 ">
+          <div class="text-left pt-2">          
+            <!--Title-->
+            <h4 class="quenecesitas">Panel Solar</h4>
+            <!--Text-->
+            <p class=" quenecesitas2">Los Paneles Solares de Sentimar cuentan con materiales de calidad
+            para transformar la energía solar a energía eléctrica. </p>
+          </div>
+        </div>         
+      </div> 
+
+
+            
+        <div class="row">  
+      <div class="col-lg-2 col-md-2 mb-2 ">
+        <div class="energia_number">2</div>
+      </div>
+      <div class="col-lg-6  col-md-12   mb-2 ">
+        <div class="text-left pt-2">          
+          <!--Title-->
+          <h4 class="quenecesitas">Inversor de Corriente</h4>
+          <!--Text-->
+          <p class=" quenecesitas2">Sentimar cuenta con los mejores Inversores y Microinversores
+            capaces de transformar la energía continua a alterna </p>
+        </div>
+      </div>         
+    </div> 
+
+
+    <div class="row">  
+      <div class="col-lg-2 col-md-2 mb-2 ">
+        <div class="energia_number">3 </div>
+      </div>
+      <div class="col-lg-6  col-md-12   mb-2 ">
+        <div class="text-left pt-2">          
+          <!--Title-->
+          <h4 class="quenecesitas">Centro de Carga</h4>
+          <!--Text-->
+          <p class=" quenecesitas2">Ya se encuentra en tu hogar, por lo que nosotros lo modificamos correctamente </p>
+        </div>
+      </div>         
+    </div> 
+
+    <div class="row">  
+      <div class="col-lg-2 col-md-2 mb-2 ">
+        <div class="energia_number">4 </div>
+      </div>
+      <div class="col-lg-6  col-md-12   mb-2 ">
+        <div class="text-left pt-2">          
+          <!--Title-->
+          <h4 class="quenecesitas">Medidor Bidireccional</h4>
+          <!--Text-->
+          <p class=" quenecesitas2">Nosotros hacemos todos los trámites para que la compañía de luz lo lleve a tu hogar, 
+            tu solo tienes que firmar y nosotros hacemos lo demás </p>
+        </div>
+      </div>         
+    </div> 
+
+
+      </div>
+    
+
+      
+           <div class="col-lg-6 col-md-6 mb-2 ">
+    <img src="img/energia_solar/giphy (1).gif" class="img-fluid 2" alt="Responsive image"style=" width:100%;height:450px;">
+  
+  </div>  
+  </div>
+</div>
+</section>
+<section id="comofunciona"> 
+
+
+
+
+
+<div class="col-lg-12 col-md-12" style="background-color: black;position: relative;bottom: 10px;padding-top: 50px;" > 
+
+  <div class="text-center "> 
+  <!--Title--> <h1 class="white-text" style="position: relative;bottom: 50px;font-family: 'PT Sans Bold', 'PT Sans', sans-serif  "><strong>¿Qué Necesitamos?</strong></h1> 
+  <!--Text-->
+  </div>
+  </div>
+
+    <!-- Grid row -->
+    <div class="row">
+  
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-12 mb-3">
+    
+        <img src="img\energia_solar\paneljuego.jpg" class=" wow rollIn z-depth-1"
+          alt="Responsive image" style=" width:80%;height: 250px; margin-left: 50px;">
+          <div class="text-center pt-4">
+            <!--Title-->
+            <h4 class="white-text"><strong>Acceso al techo o suelo</strong> </h4>
+            <!--Text-->
+            <p class=" white-text">Es necesario que puedas disponer de ese espacio Nosotros realizamos el diseño</p>
+          </div>
+    
+      </div>
+      <!-- Grid column -->
+    
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-4 mb-3">
+    
+        <img src="img\energia_solar\recibo.jpg" class="wow zoomInUp z-depth-1"
+          alt="Responsive image" style=" width:80%;height: 250px; margin-left: 50px;">
+          <div class="text-center pt-4">
+            <!--Title-->
+            <h4 class="white-text"> <strong>Recibo de Luz</strong> </h4>
+            <!--Text-->
+            <p class=" white-text">Puedes enviar el recibo por correo o Whatsapp </br>¿Para qué?</br>
+              <p style="font-size: 14px; color: #fff; ">-Así sabremos cuál es tu tarifa y consumo de luz</br>
+              -Conoceremos tu ubicación</style></p>            
+          </div>
+    
+    
+      </div>
+      <!-- Grid column -->
+    
+      <!-- Grid column -->
+      <div class="col-lg-4 col-md-5 mb-3 " >
+    
+        <img src="img\energia_solar\muchaluz.jpg" class="wow rotateIn img-fluid z-depth-1"
+          alt="Responsive image" style=" width:80%;height: 250px; margin-left: 50px;">
+          <div class="text-center pt-4">
+            <!--Title-->
+            <h4 class="white-text"><strong>Danos una cita</strong> </h4>
+            <!--Text-->
+            <p class=" white-text">Sí la información del recibo de luz no es suficiente, necesitaremos acudir a tu domicilio</p>
+            <p style="font-size: 14px; color: #fff;line-height: 16px; "><strong>Siempre cuidando tu seguridad</strong>  </style></p>
+          </div>
+    
+    
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+  
+
+
+<div class="llamanos2">
+  <div class="text-center white-text  bg-blue" style="padding-top: 70px;padding-bottom: 70px; color:rgb(42, 199, 89)">
+    <h2><strong>L L A M A N O S</strong></h2>
+    <h3 class="white-text">(55) 1290 2191</h3>
+   </div> 
+  </div>
+<!-- Grid column -->
+<!-- Grid row -->
+
+
+
+<div class="col-lg-12 col-md-12" style="background-color: black;position: relative;bottom: 10px;padding-top: 90px;" > 
+
+
+
+
+<div class="text-center white-text  darken-2" style="padding-top: 35px;position: relative;bottom: 20px;"> <h3><strong>NUESTRO TRABAJO</strong></h3> <h4>Nuestro trabajo y experiencia nos respaldan</h4> 
+<!--Carousel Wrapper--> 
+
+<div id="multi-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel"> 
+<!--Slides--> 
+
+<div class="carousel-inner" role="listbox"> 
+<!--First slide--> 
+
+<div class="carousel-item active" > 
+
+<div class="col-md-3 mb-3"> 
+
+<div > <img class="img-fluid" src="img\index\u65.png" alt="Card image cap" style="width: 200px;"> 
+</div> 
+</div> 
+
+<div class="col-md-3 mb-3"> 
+
+<div> <img class="img-fluid" src="img\index\u66.png" alt="Card image cap" style="width: 200px;"> 
+</div> 
+</div> 
+
+<div class="col-md-3 mb-3"> 
+
+<div> <img class="img-fluid" src="img\index\u67.png" alt="Card image cap" style="width: 200px;"> 
+</div> 
+</div> 
+
+<div class="col-md-3 mb-3"> 
+
+<div> <img class="img-fluid" src="img\index\u68.png" alt="Card image cap" style="width: 200px;"> 
+</div> 
+</div> 
+</div> 
+<!--/.First slide--> 
+<!--Second slide--> 
+
+<div class="carousel-item justify-content-between"> 
+
+<div class="row"> 
+
+<div class="col-md-4 mb-3"> 
+
+<div> <img class="img-fluid" src="img\index\u69.png" alt="Card image cap" style="width: 200px;"> 
+</div> 
+</div> 
+
+<div class="col-md-4 mb-3"> 
+
+<div> <img class="img-fluid" src="img\index\u70.png" alt="Card image cap" style="width: 200px;"> 
+</div> 
+</div> 
+
+<div class="col-md-4 mb-3"> 
+
+<div> <img class="img-fluid" src="img\index\u71.png" alt="Card image cap" style="width: 200px;"> 
+</div> 
+</div> 
+</div> 
+</div> 
+<!--/.Second slide--> 
+</div> 
+<!--/.Slides--> 
+</div> 
+<!--/.Carousel Wrapper-->
+</div> 
+
+
+
+<div  class="bg-dark"> 
+  <section id="contact">
+    <div class="container">
+        <h2 class="text-center text-uppercase " style="color:#87d37c; font-family:'PT Sans Bold', 'PT Sans', sans-serif ;padding-top: 20px;">Contacto</h2>      
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+            <div class="card border-0 bg-dark" style="color:white;">
+              <div class="card-body text-center ">
+                   <i class="fa fa-globe fa-5x mb-3" aria-hidden="true"></i>
+                   
+                   <div class="direccion">
+                    <ul class="navbar-nav ml-auto nav-flex-icons">
+              <li class="nav-item">
+                <a class="nav-link" href="mailto:ventas@sentimar.com.mx?Subject=Me%20gustaría%20saber%20más%20de%20sus%20productos%20y%20servicios%20" style="color:white;font-family: 'PT Sans Bold', 'PT Sans', sans-serif;line-height: 30px;padding-top: 9%;">ventas@sentimar.com.mx</a>
+            </li>  </ul> </div> 
+  
+                 </div>
+               </div>
+            </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+            <div class="card border-0 bg-dark" style="color:white;">
+              <div class="card-body text-center ">
+                 <i class="fa fa-phone fa-5x mb-3" aria-hidden="true"></i>
+                  <div class="direccion">
+                  <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+              <a class="nav-link" href="tel:+5255 1290 2191" style="color:white;font-family: 'PT Sans Bold', 'PT Sans', sans-serif;line-height: 30px;padding-top: 9%;"> (55) 1290 2191</a>
+          </li>  </ul> </div> 
+               </div>
+             </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+            <div class="card border-0 bg-dark" style="color:white;">
+               <div class="card-body text-center ">
+                 <i class="fa fa-clock fa-5x mb-3 " aria-hidden="true"></i>
+                
+                <p style="padding-top: 9%; font-family: 'PT Sans Bold', 'PT Sans', sans-serif;">Lunes - Viernes de 9 a 18:30 hrs </p>
+               </div>
+             </div>
+          </div>
+  
+        </div>
+    </div>
+  </section>
+</div>
+
+
+
+  
+
+<!-- Footer --><footer class="page-footer font-small elegant-color lighten-3 py-4 text-light " style="position: relative;bottom: 20px;">
+<!-- Footer --><footer class="page-footer font-small elegant-color lighten-3 py-4 text-light"> 
+<!-- Footer Elements --> 
+
+<div class="container"> 
+
+<div class="row"> 
+
+<div class="col-md-2" style="right:20px;"> <img src="img\PAG PRINCIPAL\sentimar.png" height="70" alt="mdb logo" > 
+</div> 
+
+<div class="col-md-6">
+    <ul class="list-unstyled  d-flex justify-content-center mb-2 mt-2"> 
+    <li> <h6><a class="nav-link font-small "href="energia-solar">INICIO</a></h6> </li> 
+    <li> <h6><a class="nav-link font-small " href="nuestro_trabajo_energia_solar">NUESTRO TRABAJO</a></h6> </li> 
+    <li class="nav-item"> <h6><a class="nav-link font-small " href="que_necesitas" >¿QUÉ NECESITAS?</a></h6> </li> 
+    
+    </ul>   
+    </div> 
+    
+    
+    <div class="col-md-2">
+      <ul class="list-unstyled  d-flex justify-content-center mb-2 mt-2"> 
+    <li> <h6><a class="nav-link font-small " href="como_funciona" >¿CÓMO FUNCIONA?</a></h6> </li> 
+    <li class="nav-item"> <h6><a class="nav-link font-small " href="productos_energia_solar">PRODUCTOS</a></h6> </li> 
+    <li class="nav-item"> <h6><a class="nav-link font-small " href="#contact">CONTACTO</a></h6> </li>
+      </ul>
+    </div>
+
+</div>
+<ul class="nav justify-content-end">
+  <li class="nav-item ">
+    <a class="nav-link active" href="AVISO DE PRIVACIDAD SENTIMAR.pdf" target="_blank" style="font-size: 15px;   ">Aviso de Privacidad</a>
+  </li>
+
+<li class="nav-item">
+     <a class="nav-link " href="TERMINOS Y CONDICIONES SENTIMAR.pdf" target="_blank" style="font-size: 15px;padding-right: 120px; ">Términos y condiciones</a>
+   </li>
+  </ul>
+</div> 
+
+
+<!-- Footer Elements --></footer>
+<!-- Footer --> 
+<!-- jQuery --> 
+<script type="text/javascript" src="js/jquery.min.js">
+</script> 
+<!-- Bootstrap tooltips --> 
+<script type="text/javascript" src="js/popper.min.js">
+</script> 
+<!-- Bootstrap core JavaScript --> 
+<script type="text/javascript" src="js/bootstrap.min.js">
+</script> 
+<!-- MDB core JavaScript --> 
+<script type="text/javascript" src="js/mdb.min.js">
+</script> 
+<!-- Your custom scripts (optional) --> 
+<script type="text/javascript" src="js/style.js" >
+</script>
+
+
+
+</body>
+</html>

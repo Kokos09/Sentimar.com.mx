@@ -616,3 +616,32 @@ hr {
     border-radius: 100%;
     background: #25d366;
 }
+
+
+
+.col-center{
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .center-block{
+    float: none;
+  }
+
+
+.item{
+    align-items: center;
+
+}
+  
+.justify-content-end {
+    -ms-flex-pack: end!important;
+    justify-content: flex-end!important;
+}
+
+.boton{
+    color: black;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 40px;
+}
